@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,8 +13,9 @@ import {
 import { Separator } from "@/components/ui/separator";
 
 import { menuOptions } from "@/lib/constant";
-import clsx from "clsx";
 import { Database, GitBranch, LucideMousePointerClick } from "lucide-react";
+
+import { ModeToggle } from "@/components/global/mode-toggle";
 
 const MenuOptions = () => {
   const pathName = usePathname();
@@ -74,6 +76,9 @@ const MenuOptions = () => {
             <GitBranch size={18} className="text-muted-foreground" />
           </div>
         </div>
+      </div>
+      <div className="relative flex items-center justify-center flex-col gap-8">
+          <ModeToggle />
       </div>
     </nav>
   );
