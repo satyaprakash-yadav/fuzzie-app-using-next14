@@ -1,3 +1,4 @@
+import { UserButton } from "@clerk/nextjs";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -53,6 +54,7 @@ const Navbar = () => {
             {/* WIP:wire up user */}
           </span>
         </Link>
+        <UserButton />
         <MenuIcon className="md:hidden" />
       </aside>
     </header>
